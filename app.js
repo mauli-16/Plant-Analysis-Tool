@@ -8,11 +8,12 @@ require("dotenv").config();
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { error } = require("console");
 const cors = require("cors");
-app.use(cors());
+
 
 
 const app = express();
 const port = 5000;
+app.use(cors());
 //configure multer
 const upload = multer({ dest: "upload" });
 app.use(express.json({ limit: "10mb" }));
