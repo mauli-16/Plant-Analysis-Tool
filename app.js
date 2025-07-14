@@ -7,6 +7,9 @@ const fsPromises = fs.promises;
 require("dotenv").config();
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { error } = require("console");
+const cors = require("cors");
+app.use(cors());
+
 
 const app = express();
 const port = 5000;
